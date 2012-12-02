@@ -1,6 +1,9 @@
 Messages = new Meteor.Collection "messages"
 if Meteor.isClient
 	window.Messages = Messages
+	
+	Template.message.rendered = ->
+		$("#chat").scrollTop $("#chat")[0].scrollHeight
 
 	Template.messages.messages = ->
 		Messages.find({}, {sort: {time: -1}})
