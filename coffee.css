@@ -1,0 +1,9 @@
+#chat {
+	height: 12em;
+	width: 100%;
+	overflow: auto;
+	margin: 0 0 1em 0;
+}
+[class*="span"] {
+	background-color: red;
+}
